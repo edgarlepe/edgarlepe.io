@@ -1,19 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, StaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-import config from '../../utils/siteConfig'
-import Navigation from './Navigation'
+// Queries
+import { ghostSettings } from './queries/GhostSettingsQuery'
+import { ghostIcon } from './queries/GhostIconQuery'
 
-const Header = ({ data, isHome }) => {
-    const site = data.allGhostSettings.edges[0].node
+// Config
+import config from '../../utils/siteConfig'
+
+// Styles
+import Navigation from './Navigation'
+import headerStyles from './Header.module.scss'
+
+const Header = ({ isHome }) => {
+    const site = ghostSettings()
+    const icon = ghostIcon()
     const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
     const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
 
     return (
         <header
-            className="site-head"
+            className={headerStyles.siteHead}
             style={{
                 ...(site.cover_image && {
                     backgroundImage: `url(${site.cover_image})`,
@@ -21,33 +30,33 @@ const Header = ({ data, isHome }) => {
             }}
         >
             <div className="container">
-                <div className="site-mast">
-                    <div className="site-mast-left">
+                <div className={headerStyles.siteMast}>
+                    <div className={headerStyles.siteMastLeft}>
                         <Link to="/">
                             {site.logo ? (
                                 <img
-                                    className="site-logo"
+                                    className={headerStyles.siteLogo}
                                     src={site.logo}
                                     alt={site.title}
                                 />
                             ) : (
                                 <Img
-                                    fixed={data.file.childImageSharp.fixed}
+                                    fixed={icon}
                                     alt={site.title}
                                 />
                             )}
                         </Link>
                     </div>
-                    <div className="site-mast-right">
+                    <div className={headerStyles.siteMastRight}>
                         {site.twitter && (
                             <a
                                 href={twitterUrl}
-                                className="site-nav-item"
+                                className={headerStyles.siteNavItem}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    className="site-nav-icon"
+                                    className={headerStyles.siteNavIcon}
                                     src="/images/icons/twitter.svg"
                                     alt="Twitter"
                                 />
@@ -56,25 +65,25 @@ const Header = ({ data, isHome }) => {
                         {site.facebook && (
                             <a
                                 href={facebookUrl}
-                                className="site-nav-item"
+                                className={headerStyles.siteNavIem}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    className="site-nav-icon"
+                                    className={headerStyles.siteNavIcon}
                                     src="/images/icons/facebook.svg"
                                     alt="Facebook"
                                 />
                             </a>
                         )}
                         <a
-                            className="site-nav-item"
+                            className={headerStyles.siteNavItem}
                             href={`https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/`}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <img
-                                className="site-nav-icon"
+                                className={headerStyles.siteNavIcon}
                                 src="/images/icons/rss.svg"
                                 alt="RSS Feed"
                             />
@@ -82,21 +91,21 @@ const Header = ({ data, isHome }) => {
                     </div>
                 </div>
                 {isHome ? (
-                    <div className="site-banner">
-                        <h1 className="site-banner-title">{site.title}</h1>
-                        <p className="site-banner-desc">{site.description}</p>
+                    <div className={headerStyles.siteBanner}>
+                        <h1 className={headerStyles.siteBannerTitle}>{site.title}</h1>
+                        <p className={headerStyles.siteBannerDesc}>{site.description}</p>
                     </div>
                 ) : null}
-                <nav className="site-nav">
-                    <div className="site-nav-left">
+                <nav className={headerStyles.siteNav}>
+                    <div className={headerStyles.siteNavLeft}>
                         {/* The navigation items as setup in Ghost */}
                         <Navigation
                             data={site.navigation}
-                            navClass="site-nav-item"
+                            navClass={headerStyles.siteNavItem}
                         />
                     </div>
-                    <div className="site-nav-right">
-                        <Link className="site-nav-button" to="/about">
+                    <div className={headerStyles.siteNavRight}>
+                        <Link className={headerStyles.siteNavButton} to="/about">
                             About
                         </Link>
                     </div>
@@ -108,34 +117,6 @@ const Header = ({ data, isHome }) => {
 
 Header.propTypes = {
     isHome: PropTypes.bool,
-    data: PropTypes.shape({
-        file: PropTypes.object,
-        allGhostSettings: PropTypes.object.isRequired,
-    }).isRequired,
 }
 
-const HeaderSettingsQuery = props => (
-    <StaticQuery
-        query={graphql`
-            query GhostSettingsAndIcon {
-                allGhostSettings {
-                    edges {
-                        node {
-                            ...GhostSettingsFields
-                        }
-                    }
-                }
-                file(relativePath: {eq: "ghost-icon.png"}) {
-                    childImageSharp {
-                        fixed(width: 30, height: 30) {
-                            ...GatsbyImageSharpFixed
-                        }
-                    }
-                }
-            }
-        `}
-        render={data => <Header data={data} {...props} />}
-    />
-)
-
-export default HeaderSettingsQuery
+export default Header

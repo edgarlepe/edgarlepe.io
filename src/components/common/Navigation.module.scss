@@ -1,0 +1,11 @@
+.site-nav-item {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #fff;
+    opacity: 0.7;
+
+    &:hover {
+        text-decoration: none;
+        opacity: 1;
+    }
+}

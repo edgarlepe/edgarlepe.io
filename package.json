@@ -34,7 +34,8 @@
     "babel-eslint": "10.1.0",
     "eslint": "7.4.0",
     "eslint-plugin-ghost": "1.5.0",
-    "eslint-plugin-react": "7.20.3"
+    "eslint-plugin-react": "7.20.3",
+    "sass": "^1.26.11"
   },
   "dependencies": {
     "@tryghost/helpers": "1.1.27",
@@ -50,6 +51,7 @@
     "gatsby-plugin-manifest": "2.4.17",
     "gatsby-plugin-offline": "3.2.16",
     "gatsby-plugin-react-helmet": "3.3.9",
+    "gatsby-plugin-sass": "^2.3.13",
     "gatsby-plugin-sharp": "2.6.17",
     "gatsby-source-filesystem": "2.3.18",
     "gatsby-source-ghost": "4.0.5",
