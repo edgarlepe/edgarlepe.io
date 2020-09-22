@@ -46,10 +46,10 @@ body {
     letter-spacing: 0;
     text-rendering: optimizeLegibility;
     background: #fff;
+    font-feature-settings: "liga" on;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -moz-font-feature-settings: "liga" on;
 }
 
 ::selection {
