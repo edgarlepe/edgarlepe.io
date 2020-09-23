@@ -7,6 +7,14 @@ what's here to work the way you'd like it to.
 /* ---------------------------------------------------------- */
 
 @import 'vendor/normalize.css';
+@import 'vendor/modularscale';
+
+$modularscale: (
+    base: 1rem,
+    ratio: $major-third
+);
+
+@import 'base/fonts';
 
 @import 'base/custom-properties';
 @import 'base/reset';
