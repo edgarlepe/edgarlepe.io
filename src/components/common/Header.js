@@ -34,7 +34,7 @@ const Header = ({ isHome }) => {
                                     alt={site.title}
                                 />
                             ) : (
-                                <p className={headerStyles.siteLogoInitials}>EGL</p>
+                                <h1 className={headerStyles.siteLogoInitials}>EGL</h1>
                             )}
                         </Link>
                     </div>

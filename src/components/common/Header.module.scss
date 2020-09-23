@@ -1,9 +1,5 @@
-@import '../../styles/vendor/modularscale';
-
-$modularscale: (
-    base: 1rem,
-    ratio: $major-third
-);
+@import '../../styles/vendor/bourbon/bourbon';
+@import '../../styles/base/sass-variables';
 
 .site-head {
     padding-top: 20px;
@@ -35,7 +31,7 @@ $modularscale: (
 
     &-initials {
         font-family: var(--font-family--banner-title);
-        font-size: ms(1);
+        font-size: modular-scale(2, $font-base-heading, $font-scale-heading);
         color: var(--color-base);
         margin: 0;
     }

@@ -13,7 +13,7 @@
 
 .content {
     margin: 0 auto;
-    font-size: 1.25rem;
+    font-size: modular-scale(1, $font-base-text, $font-scale-text);
     line-height: 1.7;
 }
 
@@ -47,7 +47,7 @@
 
 .content-body h1 {
     margin: 1.0em 0 0.5em 0;
-    font-size: ms(6);
+    font-size: minor-scale(6, $font-base-heading, $font-scale-heading);
     font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -58,8 +58,8 @@
 
 .content-title {
     font-family: var(--font-family--heading);
-    margin: 0 0 0.8em;
-    font-size: ms(7);
+    margin: 0 0 0.5em;
+    font-size: modular-scale(7, $font-base-heading, $font-scale-heading);
 }
 @media (max-width: 500px) {
     .content-title {
@@ -73,7 +73,7 @@
 
 .content-body h2 {
     margin: 0.8em 0 0.4em 0;
-    font-size: ms(5);
+    font-size: modular-scale(5, $font-base-heading, $font-scale-heading);
     font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -84,7 +84,7 @@
 
 .content-body h3 {
     margin: 0.5em 0 0.2em 0;
-    font-size: ms(4);
+    font-size: modular-scale(4, $font-base-heading, $font-scale-heading);
     font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -95,7 +95,7 @@
 
 .content-body h4 {
     margin: 0.5em 0 0.2em 0;
-    font-size: ms(3);
+    font-size: modular-scale(3, $font-base-heading, $font-scale-heading);
     font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -112,14 +112,14 @@
     //font-family: Georgia,serif;
     color: var(--color-primary);
     font-style: italic;
-    font-size: ms(2);
+    font-size: modular-scale(2, $font-base-heading, $font-scale-heading);
     line-height: 1.35;
     text-align: center;
 }
 
 .content-body h6 {
     margin: 0.5em 0 0.2em 0;
-    font-size: ms(1);
+    font-size: modular-scale(1, $font-base-heading, $font-scale-heading);
     font-weight: 700;
 }
 
