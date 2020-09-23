@@ -14,7 +14,7 @@ const Footer = () => {
         <footer className={footerStyles.siteFoot}>
             <div className={`${footerStyles.siteFootNav} container`}>
                 <div className={footerStyles.siteFootNavLeft}>
-                    <Link to="/">{site.title}</Link> © 2019 &mdash; Published
+                    <Link to="/">{site.title}</Link> © 2020 &mdash; Published
                     with{` `}
                     <a
                         className={footerStyles.siteFootNavItem}
