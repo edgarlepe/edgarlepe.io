@@ -20,7 +20,7 @@ import '../../styles/global.scss'
 * styles, and meta data for each page.
 *
 */
-const DefaultLayout = ({ children, bodyClass }) => {
+const DefaultLayout = ({ children, bodyClass, isHome }) => {
     const site = ghostSettings()
 
     return (
@@ -34,7 +34,7 @@ const DefaultLayout = ({ children, bodyClass }) => {
             <div className="viewport">
                 <div className="viewport-top">
                     {/* The main header section on top of the screen */}
-                    <Header />
+                    <Header isHome={isHome} />
                     <main className="site-main">
                         {/* All the main content gets inserted here, index.js, post.js */}
                         {children}
@@ -54,6 +54,7 @@ const DefaultLayout = ({ children, bodyClass }) => {
 DefaultLayout.propTypes = {
     children: PropTypes.node.isRequired,
     bodyClass: PropTypes.string,
+    isHome: PropTypes.bool,
 }
 
 export default DefaultLayout
