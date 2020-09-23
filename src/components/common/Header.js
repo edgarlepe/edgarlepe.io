@@ -1,34 +1,28 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import React from "react"
+import PropTypes from "prop-types"
+import { Link } from "gatsby"
 
 // Queries
-import { ghostSettings } from './queries/GhostSettingsQuery'
-import { ghostIcon } from './queries/GhostIconQuery'
+import { ghostSettings } from "./queries/GhostSettingsQuery"
 
 // Config
-import config from '../../utils/siteConfig'
+import config from "../../utils/siteConfig"
 
 // Styles
-import Navigation from './Navigation'
-import headerStyles from './Header.module.scss'
+import Navigation from "./Navigation"
+import headerStyles from "./Header.module.scss"
 
 const Header = ({ isHome }) => {
     const site = ghostSettings()
-    const icon = ghostIcon()
-    const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
-    const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
+    const twitterUrl = site.twitter
+        ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}`
+        : null
+    const facebookUrl = site.facebook
+        ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}`
+        : null
 
     return (
-        <header
-            className={headerStyles.siteHead}
-            style={{
-                ...(site.cover_image && {
-                    backgroundImage: `url(${site.cover_image})`,
-                }),
-            }}
-        >
+        <header className={headerStyles.siteHead}>
             <div className="container">
                 <div className={headerStyles.siteMast}>
                     <div className={headerStyles.siteMastLeft}>
@@ -40,10 +34,7 @@ const Header = ({ isHome }) => {
                                     alt={site.title}
                                 />
                             ) : (
-                                <Img
-                                    fixed={icon}
-                                    alt={site.title}
-                                />
+                                <p className={headerStyles.siteLogoInitials}>EGL</p>
                             )}
                         </Link>
                     </div>
@@ -92,8 +83,12 @@ const Header = ({ isHome }) => {
                 </div>
                 {isHome ? (
                     <div className={headerStyles.siteBanner}>
-                        <h1 className={headerStyles.siteBannerTitle}>{site.title}</h1>
-                        <p className={headerStyles.siteBannerDesc}>{site.description}</p>
+                        <h1 className={headerStyles.siteBannerTitle}>
+                            {site.title}
+                        </h1>
+                        <p className={headerStyles.siteBannerDesc}>
+                            {site.description}
+                        </p>
                     </div>
                 ) : null}
                 <nav className={headerStyles.siteNav}>
@@ -105,7 +100,10 @@ const Header = ({ isHome }) => {
                         />
                     </div>
                     <div className={headerStyles.siteNavRight}>
-                        <Link className={headerStyles.siteNavButton} to="/about">
+                        <Link
+                            className={headerStyles.siteNavButton}
+                            to="/about"
+                        >
                             About
                         </Link>
                     </div>
