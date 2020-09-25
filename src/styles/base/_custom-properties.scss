@@ -9,13 +9,21 @@
     --color--site-background: #fff;
 
     /* Fonts */
-    --font-sans-serif: "Arimo", sans-serif;
-    --font-serif: Georgia, Times, serif;
-    --font-mono: Menlo, Courier, monospace;
-    --font-family--heading: "Barlow Condensed", sans-serif;
-    --font-family--banner-title: "Averia Serif Libre", serif;
-    --font-light: 100;
+    --font--display: "Averia Serif Libre", serif;
+    --font--sans-serif: "Arimo", sans-serif;
+    --font--sans-serif-secondary: "Barlow Condensed", sans-serif;
+    --font--serif: Georgia, Times, serif;
+    --font--mono: Menlo, Courier, monospace;
+
+    --font-family--text: var(--font--sans-serif);
+    --font-family--heading: var(--font--sans-serif-secondary);
+    --font-family--banner-title: var(--font--display);
+
+    --font-thin: 100;
+    --font-light: 300;
     --font-normal: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
     --font-bold: 700;
     --font-heavy: 800;
 

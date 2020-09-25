@@ -48,7 +48,7 @@
 .content-body h1 {
     margin: 1.0em 0 0.5em 0;
     font-size: minor-scale(6, $font-base-heading, $font-scale-heading);
-    font-weight: 700;
+    font-weight: var(--font-bold);
 }
 @media (max-width: 500px) {
     .content-body h1 {
@@ -74,7 +74,7 @@
 .content-body h2 {
     margin: 0.8em 0 0.4em 0;
     font-size: modular-scale(5, $font-base-heading, $font-scale-heading);
-    font-weight: 700;
+    font-weight: var(--font-bold);
 }
 @media (max-width: 500px) {
     .content-body h2 {
@@ -85,7 +85,7 @@
 .content-body h3 {
     margin: 0.5em 0 0.2em 0;
     font-size: modular-scale(4, $font-base-heading, $font-scale-heading);
-    font-weight: 700;
+    font-weight: var(--font-bold);
 }
 @media (max-width: 500px) {
     .content-body h3 {
@@ -96,7 +96,7 @@
 .content-body h4 {
     margin: 0.5em 0 0.2em 0;
     font-size: modular-scale(3, $font-base-heading, $font-scale-heading);
-    font-weight: 700;
+    font-weight: var(--font-bold);
 }
 @media (max-width: 500px) {
     .content-body h4 {
@@ -120,13 +120,13 @@
 .content-body h6 {
     margin: 0.5em 0 0.2em 0;
     font-size: modular-scale(1, $font-base-heading, $font-scale-heading);
-    font-weight: 700;
+    font-weight: var(--font-bold);
 }
 
 .content-body figure {
     margin: 0.4em 0 1.6em;
     font-size: 1.75rem;
-    font-weight: 700;
+    font-weight: var(--font-bold);
 }
 
 .content-body pre {
