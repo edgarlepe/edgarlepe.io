@@ -1,27 +1,19 @@
-# Gatsby Starter Ghost
+# Edgar Giovanni Lepe's personal website
 
-A starter template to build lightning fast websites with [Ghost](https://ghost.org) & [Gatsby](https://gatsbyjs.org)
-
-**Demo:** https://gatsby.ghost.org
-
-&nbsp;
-
-![gatsby-starter-ghost](https://user-images.githubusercontent.com/120485/50913567-8ab8e380-142c-11e9-9e78-de02ded12fc6.jpg)
-
-&nbsp;
+This is the source for my personal website [edgarlepe.io](https://edgarlepe.io).
+It pulls content from a [Ghost](https://ghost.org) headless instance and uses
+[Gatsby](https://gatsbyjs.org) for the front end. See
+[gatsby-starter-ghost](https://github.com/TryGhost/gatsby-starter-ghost) for
+more details.
 
 
 # Installing
 
-```bash
-# With Gatsby CLI
-gatsby new gatsby-starter-ghost https://github.com/TryGhost/gatsby-starter-ghost.git
-```
 
 ```bash
 # From Source
-git clone https://github.com/TryGhost/gatsby-starter-ghost.git
-cd gatsby-starter-ghost
+git clone https://github.com/edgarlepe.net
+cd edgarlepe.net
 ```
 
 Then install dependencies
@@ -40,28 +32,19 @@ Start the development server. You now have a Gatsby site pulling content from he
 gatsby develop
 ```
 
-By default, the starter will populate content from a default Ghost install located at https://gatsby.ghost.io.
-
 To use your own install, you will need to edit the `.ghost.json` config file with your credentials. Change the `apiUrl` value to the URL of your Ghost site. For Ghost(Pro) customers, this is the Ghost URL ending in `.ghost.io`, and for people using the self-hosted version of Ghost, it's the same URL used to access your site.
 
 Next, update the `contentApiKey` value to a key associated with the Ghost site. A key can be provided by creating an integration within Ghost Admin. Navigate to Integrations and click "Add new integration". Name the integration appropriately and click create.
 
-Finally, configure your desired URL in `siteConfig.js`, so links (e. g. canonical links) are generated correctly. You can also update other default values, such as `postsPerPage` in this file.
+Finally, configure your desired URL in `siteConfig.js`, so links (e. g.
+canonical links) are generated correctly. You can also update other default values, such as `postsPerPage` in this file.
 
-To use this starter without issues, your Ghost installation needs to be at least on version `2.10.0`.
+To use this starter without issues, your Ghost installation needs to be at least on version.
 
-The default Ghost version that is used for this starter is `3.x`. If your Ghost installation is on a lower version, you will need to pass in a `version` property in your `.ghost.json` settings:
-
-**Ghost >=2.10.0 <3.0.0**
-```json
-{
-    "apiUrl": "https://gatsby.ghost.io",
-    "contentApiKey": "9cc5c67c358edfdd81455149d0",
-    "version": "v2"
-}
-```
+The default Ghost version that is used for this starter is `4.x`.
 
 **Ghost <=3.0.0**
+
 ```json
 {
     "apiUrl": "https://gatsby.ghost.io",
@@ -107,4 +90,4 @@ Gatsby `develop` uses the `development` config in `.ghost.json` - while Gatsby `
 
 # Copyright & License
 
-Copyright (c) 2013-2020 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2020-2021 Edgar Giovanni Lepe - Released under the [MIT license](LICENSE).
