@@ -1,10 +1,10 @@
 {
   "development": {
-    "apiUrl": "https://api.edgarlepe.net",
+    "apiUrl": "https://api.edgarlepe.io",
     "contentApiKey": "fae01986361fbe2369251cecc7"
   },
   "production": {
-    "apiUrl": "https://api.edgarlepe.net",
+    "apiUrl": "https://api.edgarlepe.io",
     "contentApiKey": "fae01986361fbe2369251cecc7"
   }
 }
