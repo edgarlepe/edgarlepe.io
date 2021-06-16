@@ -4,22 +4,29 @@ import { Link } from 'gatsby'
 import { Tags } from '@tryghost/helpers-gatsby'
 import { readingTime as readingTimeHelper } from '@tryghost/helpers'
 
-import postCardStyles from './PostCard.module.scss'
+import {
+    postCard,
+    postCardTitle,
+    postCardTags,
+    postCardExcerpt,
+    postCardFooter,
+    postCardFooterRight,
+} from './PostCard.module.scss'
 
 const PostCard = ({ post }) => {
     const url = `/${post.slug}/`
     const readingTime = readingTimeHelper(post)
 
     return (
-        <Link to={url} className={postCardStyles.postCard}>
-            <header className={postCardStyles.postCardHeader}>
-                <h2 className={postCardStyles.postCardTitle}>{post.title}</h2>
+        <Link to={url} className={postCard}>
+            <header>
+                <h2 className={postCardTitle}>{post.title}</h2>
                 {post.featured && <span>Featured</span>}
-                {post.tags && <div className={postCardStyles.postCardTags}> <Tags post={post} visibility="public" autolink={false} /></div>}
+                {post.tags && <div className={postCardTags}> <Tags post={post} visibility="public" autolink={false} /></div>}
             </header>
-            <section className={postCardStyles.postCardExcerpt}>{post.excerpt}</section>
-            <footer className={postCardStyles.postCardFooter}>
-                <div className={postCardStyles.postCardFooterRight}>
+            <section className={postCardExcerpt}>{post.excerpt}</section>
+            <footer className={postCardFooter}>
+                <div className={postCardFooterRight}>
                     <div>{readingTime}</div>
                 </div>
             </footer>

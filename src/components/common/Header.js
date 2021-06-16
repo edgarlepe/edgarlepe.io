@@ -10,7 +10,21 @@ import config from "../../utils/siteConfig"
 
 // Styles
 import Navigation from "./Navigation"
-import headerStyles from "./Header.module.scss"
+import {
+    siteHead,
+    siteMast,
+    siteMastRight,
+    siteLogo,
+    siteLogoInitials,
+    siteBanner,
+    siteBannerTitle,
+    siteBannerDesc,
+    siteNav,
+    siteNavLeft,
+    siteNavItem,
+    siteNavIcon,
+    siteNavButton,
+} from "./Header.module.scss"
 
 const Header = ({ isHome }) => {
     const site = ghostSettings()
@@ -22,32 +36,32 @@ const Header = ({ isHome }) => {
         : null
 
     return (
-        <header className={headerStyles.siteHead}>
+        <header className={siteHead}>
             <div className="container">
-                <div className={headerStyles.siteMast}>
-                    <div className={headerStyles.siteMastLeft}>
+                <div className={siteMast}>
+                    <div>
                         <Link to="/">
                             {site.logo ? (
                                 <img
-                                    className={headerStyles.siteLogo}
+                                    className={siteLogo}
                                     src={site.logo}
                                     alt={site.title}
                                 />
                             ) : (
-                                <h1 className={headerStyles.siteLogoInitials}>EGL</h1>
+                                <h1 className={siteLogoInitials}>EGL</h1>
                             )}
                         </Link>
                     </div>
-                    <div className={headerStyles.siteMastRight}>
+                    <div className={siteMastRight}>
                         {site.twitter && (
                             <a
                                 href={twitterUrl}
-                                className={headerStyles.siteNavItem}
+                                className={siteNavItem}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    className={headerStyles.siteNavIcon}
+                                    className={siteNavIcon}
                                     src="/images/icons/twitter.svg"
                                     alt="Twitter"
                                 />
@@ -56,25 +70,25 @@ const Header = ({ isHome }) => {
                         {site.facebook && (
                             <a
                                 href={facebookUrl}
-                                className={headerStyles.siteNavIem}
+                                className={siteNavItem}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    className={headerStyles.siteNavIcon}
+                                    className={siteNavIcon}
                                     src="/images/icons/facebook.svg"
                                     alt="Facebook"
                                 />
                             </a>
                         )}
                         <a
-                            className={headerStyles.siteNavItem}
+                            className={siteNavItem}
                             href={`https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/`}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <img
-                                className={headerStyles.siteNavIcon}
+                                className={siteNavIcon}
                                 src="/images/icons/rss.svg"
                                 alt="RSS Feed"
                             />
@@ -82,26 +96,26 @@ const Header = ({ isHome }) => {
                     </div>
                 </div>
                 {isHome ? (
-                    <div className={headerStyles.siteBanner}>
-                        <h1 className={headerStyles.siteBannerTitle}>
+                    <div className={siteBanner}>
+                        <h1 className={siteBannerTitle}>
                             {site.title}
                         </h1>
-                        <p className={headerStyles.siteBannerDesc}>
+                        <p className={siteBannerDesc}>
                             {site.description}
                         </p>
                     </div>
                 ) : null}
-                <nav className={headerStyles.siteNav}>
-                    <div className={headerStyles.siteNavLeft}>
+                <nav className={siteNav}>
+                    <div className={siteNavLeft}>
                         {/* The navigation items as setup in Ghost */}
                         <Navigation
                             data={site.navigation}
-                            navClass={headerStyles.siteNavItem}
+                            navClass={siteNavItem}
                         />
                     </div>
-                    <div className={headerStyles.siteNavRight}>
+                    <div>
                         <Link
-                            className={headerStyles.siteNavButton}
+                            className={siteNavButton}
                             to="/about"
                         >
                             About

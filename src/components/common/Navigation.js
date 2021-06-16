@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-import navigationStyles from './Navigation.module.scss'
+import { siteNavItem } from './Navigation.module.scss'
 
 /**
 * Navigation component
@@ -27,7 +27,7 @@ const Navigation = ({ data, navClass }) => (
 )
 
 Navigation.defaultProps = {
-    navClass: navigationStyles.siteNavItem,
+    navClass: siteNavItem,
 }
 
 Navigation.propTypes = {

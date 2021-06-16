@@ -5,19 +5,22 @@ import { ghostSettings } from "./queries/GhostSettingsQuery"
 
 import { Navigation } from "."
 
-import footerStyles from './Footer.module.scss'
+import {
+    siteFoot,
+    siteFootNav,
+    siteFootNavRight,
+} from './Footer.module.scss'
 
 const Footer = () => {
     const site = ghostSettings()
 
     return (
-        <footer className={footerStyles.siteFoot}>
-            <div className={`${footerStyles.siteFootNav} container`}>
-                <div className={footerStyles.siteFootNavLeft}>
-                    <Link to="/">{site.title}</Link> © 2020 &mdash; Published
+        <footer className={siteFoot}>
+            <div className={`${siteFootNav} container`}>
+                <div>
+                    <Link to="/">{site.title}</Link> © 2021 &mdash; Published
                     with{` `}
                     <a
-                        className={footerStyles.siteFootNavItem}
                         href="https://ghost.org"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -25,10 +28,9 @@ const Footer = () => {
                         Ghost
                     </a>
                 </div>
-                <div className={footerStyles.siteFootNavRight}>
+                <div className={siteFootNavRight}>
                     <Navigation
                         data={site.navigation}
-                        navClass={footerStyles.siteFootNavItem}
                     />
                 </div>
             </div>

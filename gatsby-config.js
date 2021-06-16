@@ -35,7 +35,7 @@ if (process.env.NODE_ENV === `production` && config.siteUrl === `http://localhos
 */
 module.exports = {
     siteMetadata: {
-        siteUrl: config.siteUrl,
+        siteUrl: process.env.SITEURL || config.siteUrl,
     },
     plugins: [
         /**
@@ -192,9 +192,6 @@ module.exports = {
             resolve: `gatsby-plugin-sass`,
             options: {
                 implementation: require(`sass`),
-                sassOptions: {
-                    fiber: require('fibers'),
-                },
             },
         },
     ],
