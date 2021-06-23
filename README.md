@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8f001645-c5b6-442f-ba5b-34c86baafd8d/deploy-status)](https://app.netlify.com/sites/frosty-wright-559d28/deploys)
+
+
 # Edgar Giovanni Lepe's personal website
 
 This is the source for my personal website [edgarlepe.io](https://edgarlepe.io).
