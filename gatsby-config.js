@@ -7,9 +7,7 @@ const path = require(`path`)
 const config = require(`./src/utils/siteConfig`)
 const generateRSSFeed = require(`./src/utils/rss/generate-feed`)
 
-let ghostConfig
-
-ghostConfig = {
+let ghostConfig = {
     production: {
         apiUrl: process.env.GHOST_API_URL,
         contentApiKey: process.env.GHOST_CONTENT_API_KEY,

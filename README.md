@@ -12,8 +12,8 @@ more details.
 
 ```bash
 # From Source
-git clone https://github.com/edgarlepe.net
-cd edgarlepe.net
+git clone https://github.com/edgarlepe.io
+cd edgarlepe.io
 ```
 
 Then install dependencies
