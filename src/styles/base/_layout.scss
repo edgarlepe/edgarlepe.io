@@ -13,14 +13,25 @@
 
 .content {
     margin: 0 auto;
-    font-size: modular-scale(1, $font-base-text, $font-scale-text);
-    line-height: 1.7;
+//    font-size: var(--text--ms2);
+    line-height: var(--line-height--content);
+}
+@media (width > $small-screen) {
+    .content {
+//        font-size: var(--text--ms3);
+    }
 }
 
 .content-body {
     display: flex;
     flex-direction: column;
-    // font-family: var(--font-serif);
+    // font-family: var(--font--serif);
+}
+
+.content p {
+   white-space: pre-wrap;
+   overflow-wrap: break-word;
+   hypens: auto;
 }
 
 .post-full-content {
@@ -36,97 +47,20 @@
     object-fit: cover;
 }
 
-// .content-body h1,
-// .content-body h2,
-// .content-body h3,
-// .content-body h4,
-// .content-body h5,
-// .content-body h6 {
-//     font-family: var(--font-heading);
-// }
-
-.content-body h1 {
-    margin: 1.0em 0 0.5em 0;
-    font-size: minor-scale(6, $font-base-heading, $font-scale-heading);
-    font-weight: var(--font-bold);
-}
-@media (max-width: 500px) {
-    .content-body h1 {
-        font-size: 1.75rem;
-    }
-}
 
 .content-title {
-    font-family: var(--font-family--heading);
-    margin: 0 0 0.5em;
-    font-size: modular-scale(7, $font-base-heading, $font-scale-heading);
+    margin: 0.8em 0 0.8em 0;
 }
-@media (max-width: 500px) {
+@media (width > $small-screen) {
     .content-title {
-        margin: 0.8em 0;
-        font-size: 2.125rem;
+        margin: 1em 0 1em 0;
     }
-    .content {
-        font-size: 1.125rem;
-    }
-}
-
-.content-body h2 {
-    margin: 0.8em 0 0.4em 0;
-    font-size: modular-scale(5, $font-base-heading, $font-scale-heading);
-    font-weight: var(--font-bold);
-}
-@media (max-width: 500px) {
-    .content-body h2 {
-        font-size: 1.625rem;
-    }
-}
-
-.content-body h3 {
-    margin: 0.5em 0 0.2em 0;
-    font-size: modular-scale(4, $font-base-heading, $font-scale-heading);
-    font-weight: var(--font-bold);
-}
-@media (max-width: 500px) {
-    .content-body h3 {
-        font-size: 1.375rem;
-    }
-}
-
-.content-body h4 {
-    margin: 0.5em 0 0.2em 0;
-    font-size: modular-scale(3, $font-base-heading, $font-scale-heading);
-    font-weight: var(--font-bold);
-}
-@media (max-width: 500px) {
-    .content-body h4 {
-        font-size: 1.375rem;
-    }
-}
-
-.content-body h5 {
-    display: block;
-    margin: 0.5em 0;
-    padding: 1em 0 1.5em;
-    border: 0;
-    //font-family: Georgia,serif;
-    color: var(--color-primary);
-    font-style: italic;
-    font-size: modular-scale(2, $font-base-heading, $font-scale-heading);
-    line-height: 1.35;
-    text-align: center;
-}
-
-.content-body h6 {
-    margin: 0.5em 0 0.2em 0;
-    font-size: modular-scale(1, $font-base-heading, $font-scale-heading);
-    font-weight: var(--font-bold);
 }
 
 .content-body figure {
     margin: 0.4em 0 1.6em;
     font-size: 1.75rem;
-    font-weight: var(--font-bold);
+    font-weight: var(--font--bold);
 }
 
 .content-body pre {
@@ -135,7 +69,7 @@
     line-height: 1.4;
     white-space: pre-wrap;
     padding: 20px;
-    background: var(--color-base);
+    background: var(--color--base);
     color: #fff;
     border-radius: 12px;
 }
@@ -154,16 +88,16 @@
     display: grid;
     justify-content: space-between;
     grid-gap: 30px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
-@media (max-width: 980px) {
+@media (width > $small-screen) and (width <= $large-screen) {
     .post-feed {
         grid-template-columns: 1fr 1fr;
     }
 }
-@media (max-width: 680px) {
+@media (width >= $large-screen) {
     .post-feed {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }

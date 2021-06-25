@@ -1,0 +1,21 @@
+@include font-face(
+  "Open Sans",
+  "fonts/OpenSans/OpenSans[wdth,wght]",
+  ("woff2")
+) {
+  font-style: normal;
+  font-stretch: 75% 125%;
+  font-weight: 300 800;
+  display: swap;
+}
+
+@include font-face(
+  "Open Sans",
+  "fonts/OpenSans/OpenSans-Italic[wdth,wght]",
+  ("woff2")
+) {
+  font-style: italic;
+  font-stretch: 75% 125%;
+  font-weight: 300 800;
+  display: swap;
+}

@@ -1,0 +1,109 @@
+@include font-face(
+    "Barlow",
+    "fonts/Barlow/Barlow-Regular",
+    ("woff", "woff2")
+) {
+    font-style: normal;
+    font-weight: 400;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow",
+    "fonts/Barlow/Barlow-Medium",
+    ("woff", "woff2")
+) {
+    font-style: normal;
+    font-weight: 500;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow",
+    "fonts/Barlow/Barlow-MediumItalic",
+    ("woff", "woff2")
+) {
+    font-style: italic;
+    font-weight: 500;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow",
+    "fonts/Barlow/Barlow-SemiBold",
+    ("woff", "woff2")
+) {
+    font-style: normal;
+    font-weight: 600;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow",
+    "fonts/Barlow/Barlow-SemiBoldItalic",
+    ("woff", "woff2")
+) {
+    font-style: italic;
+    font-weight: 600;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow",
+    "fonts/Barlow/Barlow-Bold",
+    ("woff", "woff2")
+) {
+    font-style: normal;
+    font-weight: 700;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow",
+    "fonts/Barlow/Barlow-BoldItalic",
+    ("woff", "woff2")
+) {
+    font-style: italic;
+    font-weight: 700;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow",
+    "fonts/Barlow/Barlow-ExtraBold",
+    ("woff", "woff2")
+) {
+    font-style: normal;
+    font-weight: 800;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow",
+    "fonts/Barlow/Barlow-ExtraBoldItalic",
+    ("woff", "woff2")
+) {
+    font-style: italic;
+    font-weight: 800;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow",
+    "fonts/Barlow/Barlow-Black",
+    ("woff", "woff2")
+) {
+    font-style: normal;
+    font-weight: 900;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow",
+    "fonts/Barlow/Barlow-BlackItalic",
+    ("woff", "woff2")
+) {
+    font-style: italic;
+    font-weight: 900;
+    display: swap;
+}

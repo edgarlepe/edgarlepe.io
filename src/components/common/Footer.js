@@ -18,15 +18,7 @@ const Footer = () => {
         <footer className={siteFoot}>
             <div className={`${siteFootNav} container`}>
                 <div>
-                    <Link to="/">{site.title}</Link> © 2021 &mdash; Published
-                    with{` `}
-                    <a
-                        href="https://ghost.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Ghost
-                    </a>
+                    <Link to="/">{site.title}</Link> © 2021
                 </div>
                 <div className={siteFootNavRight}>
                     <Navigation

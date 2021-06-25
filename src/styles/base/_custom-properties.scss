@@ -1,35 +1,67 @@
 :root {
 
-    /* Colours */
-    --color-primary: #3eb0ef;
-    --color-base: #050505;
-    --color-secondary: #5B7A81;
-    --color-border: #c7d5d8;
-    --color-bg: #f5f5f5;
+    /* Colors */
+    --color--primary: #cc0000;
+    --color--base: #050505;
+    --color--secondary: #cc0000; // The old blue color: #5B7A81
+    --color--border: #c7d5d8;
+    --color--bg: #f5f5f5;
     --color--site-background: #fff;
 
     /* Fonts */
     --font--display: "Averia Serif Libre", serif;
-    --font--sans-serif: "Arimo", sans-serif;
-    --font--sans-serif-secondary: "Barlow Condensed", sans-serif;
+    --font--sans-serif: "Barlow", sans-serif;
+    --font--sans-serif--secondary: "Barlow Condensed", sans-serif;
     --font--serif: Georgia, Times, serif;
-    --font--mono: Menlo, Courier, monospace;
+    --font--mono: "Inconsolata", "Menlo", Courier, monospace;
 
-    --font-family--text: var(--font--sans-serif);
-    --font-family--heading: var(--font--sans-serif-secondary);
+    --font-family--text:         var(--font--sans-serif);
+    --font-family--heading:      var(--font--sans-serif--secondary);
     --font-family--banner-title: var(--font--display);
 
-    --font-thin: 100;
-    --font-light: 300;
-    --font-normal: 400;
-    --font-medium: 500;
-    --font-semi-bold: 600;
-    --font-bold: 700;
-    --font-heavy: 800;
+    --font--thin:        100;
+    --font--extra-light: 200;
+    --font--light:       300;
+    --font--normal:      400;
+    --font--medium:      500;
+    --font--semi-bold:   600;
+    --font--bold:        700;
+    --font--heavy:       800;
 
     /* Sizes */
     --height: 4rem;
     --margin: 2rem;
     --radius: 0.6rem;
+    --measure: 65ch;
 
+    --line-height--default: 1.2;
+    --line-height--content: 1.2;
+    --line-height--heading: 1.1;
+
+    --text--base-size: 1rem;
+    --text--scale: 1.125;
+    --heading--base-size: 1.2rem;
+    --heading--scale: 1.2;
+
+    --text--ms-2: calc(var(--text--ms-1)      / var(--text--scale));
+    --text--ms-1: calc(var(--text--base-size) / var(--text--scale));
+
+    --text--ms1: calc(var(--text--base-size) * var(--text--scale));
+    --text--ms2: calc(var(--text--ms1)      * var(--text--scale));
+    --text--ms3: calc(var(--text--ms2)      * var(--text--scale));
+    --text--ms4: calc(var(--text--ms3)      * var(--text--scale));
+    --text--ms5: calc(var(--text--ms4)      * var(--text--scale));
+    --text--ms6: calc(var(--text--ms5)      * var(--text--scale));
+    --text--ms7: calc(var(--text--ms6)      * var(--text--scale));
+
+    --heading--ms-2: calc(var(--heading--ms-2)      / var(--heading--scale));
+    --heading--ms-1: calc(var(--heading--base-size) / var(--heading--scale));
+
+    --heading--ms1: calc(var(--heading--base-size) * var(--heading--scale));
+    --heading--ms2: calc(var(--heading--ms1)      * var(--heading--scale));
+    --heading--ms3: calc(var(--heading--ms2)      * var(--heading--scale));
+    --heading--ms4: calc(var(--heading--ms3)      * var(--heading--scale));
+    --heading--ms5: calc(var(--heading--ms4)      * var(--heading--scale));
+    --heading--ms6: calc(var(--heading--ms5)      * var(--heading--scale));
+    --heading--ms7: calc(var(--heading--ms6)      * var(--heading--scale));
 }

@@ -9,14 +9,14 @@
 
 .tag-header p {
     margin: 0;
-    color: var(--color-secondary);
+    color: var(--color--secondary);
     font-size: 1.375rem;
     line-height: 1.3;
 }
 
 @media (max-width: 500px) {
     .tag-header {
-        border-bottom: var(--color-bg) 1px solid;
+        border-bottom: var(--color--bg) 1px solid;
         padding-bottom: 4vw;
     }
     .tag-header p {

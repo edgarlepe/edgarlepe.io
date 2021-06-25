@@ -1,0 +1,109 @@
+@include font-face(
+    "Barlow Condensed",
+    "fonts/Barlow/BarlowCondensed-Regular",
+    ("woff", "woff2")
+) {
+    font-style: normal;
+    font-weight: 400;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow Condensed",
+    "fonts/Barlow/BarlowCondensed-Medium",
+    ("woff", "woff2")
+) {
+    font-style: normal;
+    font-weight: 500;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow Condensed",
+    "fonts/Barlow/BarlowCondensed-MediumItalic",
+    ("woff", "woff2")
+) {
+    font-style: italic;
+    font-weight: 500;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow Condensed",
+    "fonts/Barlow/BarlowCondensed-SemiBold",
+    ("woff", "woff2")
+) {
+    font-style: normal;
+    font-weight: 600;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow Condensed",
+    "fonts/Barlow/BarlowCondensed-SemiBoldItalic",
+    ("woff", "woff2")
+) {
+    font-style: italic;
+    font-weight: 600;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow Condensed",
+    "fonts/Barlow/BarlowCondensed-Bold",
+    ("woff", "woff2")
+) {
+    font-style: normal;
+    font-weight: 700;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow Condensed",
+    "fonts/Barlow/BarlowCondensed-BoldItalic",
+    ("woff", "woff2")
+) {
+    font-style: italic;
+    font-weight: 700;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow Condensed",
+    "fonts/Barlow/BarlowCondensed-ExtraBold",
+    ("woff", "woff2")
+) {
+    font-style: normal;
+    font-weight: 800;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow Condensed",
+    "fonts/Barlow/BarlowCondensed-ExtraBoldItalic",
+    ("woff", "woff2")
+) {
+    font-style: italic;
+    font-weight: 800;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow Condensed",
+    "fonts/Barlow/BarlowCondensed-Black",
+    ("woff", "woff2")
+) {
+    font-style: normal;
+    font-weight: 900;
+    display: swap;
+}
+
+@include font-face(
+    "Barlow Condensed",
+    "fonts/Barlow/BarlowCondensed-BlackItalic",
+    ("woff", "woff2")
+) {
+    font-style: italic;
+    font-weight: 900;
+    display: swap;
+}

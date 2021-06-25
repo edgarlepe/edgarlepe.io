@@ -1,10 +1,10 @@
-@import '../../styles/vendor/bourbon/bourbon';
-@import '../../styles/base/sass-variables';
+@import 'vendor/bourbon/bourbon';
+@import 'base/sass-variables';
 
 .site-head {
     padding-top: 20px;
     padding-bottom: 20px;
-    color: var(--color-base);
+    color: var(--color--base);
     background-position: center;
     background-size: cover;
 }
@@ -12,7 +12,7 @@
 .site-nav-item {
     display: inline-block;
     padding: 5px 10px;
-    color: var(--color-base);
+    color: var(--color--secondary);
     opacity: 0.7;
 
     &:hover {
@@ -31,8 +31,8 @@
 
     &-initials {
         font-family: var(--font-family--banner-title);
-        font-size: modular-scale(2, $font-base-heading, $font-scale-heading);
-        color: var(--color-base);
+        font-size: var(--heading--ms2);
+        color: var(--color--base);
         margin: 0;
     }
 }
@@ -62,15 +62,15 @@
         font-family: var(--font-family--banner-title);
         margin: 0;
         padding: 0;
-        color: var(--color-base);
-        font-size: 2.5rem;
+        color: var(--color--base);
+        font-size: calc(var(--heading--ms3) + 1.5vw);
         line-height: 1.3;
     }
 
     &-desc {
         margin: 5px 0 0 0;
         padding: 0;
-        font-size: 1.5rem;
+        font-size: calc(var(--heading--ms1) + 0.75vw);
         line-height: 1.3;
         opacity: 0.7;
     }
@@ -82,7 +82,8 @@
     justify-content: space-between;
     margin: 15px 0 0 0;
     padding-bottom: 20px;
-    border-bottom: medium solid var(--color-base);
+    border-bottom: medium solid var(--color--base);
+    font-size: calc(var(--text--base-size) + 0.2vw);
 
     &-left {
         margin: 0 20px 0 -10px;
@@ -91,10 +92,10 @@
     &-button {
         display: inline-block;
         padding: 5px 10px;
-        border: var(--color-base) 1px solid;
-        color: var(--color-base);
-        font-size: 0.8125rem;
-        line-height: 1;
+        border: var(--color--base) 1px solid;
+        color: var(--color--base);
+        line-height: var(--line-height--content);
+        font-size: calc(var(--text--ms-1) + 0.2vw);
         border-radius: var(--radius);
         opacity: 0.7;
     }

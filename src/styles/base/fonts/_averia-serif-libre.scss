@@ -1,0 +1,59 @@
+@include font-face(
+  "Averia Serif Libre",
+  "fonts/AveriaSerifLibre/AveriaSerif-Light",
+  ("woff2")
+) {
+  font-style: normal;
+  font-weight: 300;
+  display: swap;
+}
+
+@include font-face(
+  "Averia Serif Libre",
+  "fonts/AveriaSerifLibre/AveriaSerif-LightItalic",
+  ("woff2")
+) {
+  font-style: italic;
+  font-weight: 300;
+  display: swap;
+}
+
+@include font-face(
+  "Averia Serif Libre",
+  "fonts/AveriaSerifLibre/AveriaSerif-Regular",
+  ("woff2")
+) {
+  font-style: normal;
+  font-weight: 400;
+  display: swap;
+}
+
+@include font-face(
+  "Averia Serif Libre",
+  "fonts/AveriaSerifLibre/AveriaSerif-Italic",
+  ("woff2")
+) {
+  font-style: italic;
+  font-weight: 400;
+  display: swap;
+}
+
+@include font-face(
+  "Averia Serif Libre",
+  "fonts/AveriaSerifLibre/AveriaSerif-Bold",
+  ("woff2")
+) {
+  font-style: normal;
+  font-weight: 700;
+  display: swap;
+}
+
+@include font-face(
+  "Averia Serif Libre",
+  "fonts/AveriaSerifLibre/AveriaSerif-BoldItalic",
+  ("woff2")
+) {
+  font-style: italic;
+  font-weight: 700;
+  display: swap;
+}

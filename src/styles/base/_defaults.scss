@@ -1,20 +1,34 @@
 
+* {
+    max-width: var(--measure);
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+    max-width: none;
+}
+
 html {
     overflow-x: hidden;
     overflow-y: scroll;
     font-size: 100%;
-    background: var(--color-base);
+    background: var(--color--base);
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
     overflow-x: hidden;
-    color: var(--color-base);
+    color: var(--color--base);
     font-family: var(--font-family--text);
-    font-size: 1rem;
-    line-height: 1.6;
-    font-weight: var(--font-normal);
+    font-size: calc(var(--text--ms1) + 0.2vw);
+    line-height: var(--line-height--content);
+    font-weight: var(--font--medium);
     font-style: normal;
     letter-spacing: 0;
     text-rendering: optimizeLegibility;
@@ -65,7 +79,7 @@ ul,
 ol,
 dl,
 blockquote {
-    margin: 0 0 1.5em 0;
+    margin: 0 0 1em 0;
 }
 
 ol,
@@ -97,14 +111,14 @@ ol {
 li {
     margin: 0.5em 0;
     padding-left: 0.3em;
-    line-height: 1.56;
+    line-height: var(--line-height--content);
 }
 
 dt {
     float: left;
     margin: 0 20px 0 0;
     width: 120px;
-    font-weight: var(--font-medium);
+    font-weight: var(--font--medium);
     text-align: right;
 }
 
@@ -116,13 +130,13 @@ dd {
 blockquote {
     margin: 0.3em 0 1.8em;
     padding: 0 1.6em 0 1.6em;
-    border-left: #cbeafb 0.5em solid;
+    border-left: var(--color--secondary) 0.5em solid;
 }
 
 blockquote p {
     margin: 0.8em 0;
     font-size: 1.125em;
-    font-weight: var(--font-light);
+    font-weight: var(--font--light);
 }
 
 blockquote small {
@@ -137,19 +151,27 @@ blockquote small:before {
 }
 
 blockquote cite {
-    font-weight: var(--font-bold);
+    font-weight: var(--font--bold);
 }
 blockquote cite a {
-    font-weight: var(--font-normal);
+    font-weight: var(--font--normal);
 }
 
 a {
-    color: #26a8ed;
+    color: var(--color--secondary);
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: var(--font--mono);
+    line-height: var(--line-height--content);
 }
 
 h1,
@@ -159,61 +181,34 @@ h4,
 h5,
 h6 {
     font-family: var(--font-family--heading);
-    margin-top: 0;
-    color: var(--color-base);
-    line-height: 1.15;
-    font-weight: var(--font-bold);
+    margin: 0.4em 0 1em 0;
+    color: var(--color--base);
+    line-height: var(--line-height--heading);
     text-rendering: optimizeLegibility;
 }
 
 h1 {
-    margin: 0 0 0.5em 0;
-    font-size: 3.75rem;
-    font-weight: var(--font-bold);
-}
-@media (max-width: 500px) {
-    h1 {
-        font-size: 1.875rem;
-    }
+    font-size: calc(var(--heading--ms6) + 0.2vw);
+    font-weight: var(--font--bold);
 }
 
 h2 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 1.875rem;
-    font-weight: var(--font-bold);
+    font-size: calc(var(--heading--ms5) + 0.2vw);
+    font-weight: var(--font--bold);
 }
-@media (max-width: 500px) {
-    h2 {
-        font-size: 1.7rem;
-    }
-}
-
 h3 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 1.7rem;
-    font-weight: var(--font-medium);
+    font-size: calc(var(--heading--ms4) + 0.2vw);
+    font-weight: var(--font--medium);
 }
-@media (max-width: 500px) {
-    h3 {
-        font-size: 1.6rem;
-    }
-}
-
 h4 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 1.5rem;
-    font-weight: var(--font-medium);
+    font-size: calc(var(--heading--ms3) + 0.2vw);
+    font-weight: var(--font--medium);
 }
-
 h5 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 1.3rem;
-    font-weight: var(--font-medium);
+    font-size: calc(var(--heading--ms2) + 0.2vw);
+    font-weight: var(--font--medium);
 }
-
 h6 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 1.3rem;
-    font-weight: var(--font-medium);
+    font-size: calc(var(--heading--ms1) + 0.2vw);
+    font-weight: var(--font--medium);
 }
-
