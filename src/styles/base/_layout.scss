@@ -13,25 +13,17 @@
 
 .content {
     margin: 0 auto;
-//    font-size: var(--text--ms2);
     line-height: var(--line-height--content);
 }
-@media (width > $small-screen) {
-    .content {
-//        font-size: var(--text--ms3);
-    }
-}
-
 .content-body {
     display: flex;
     flex-direction: column;
-    // font-family: var(--font--serif);
 }
 
 .content p {
-   white-space: pre-wrap;
-   overflow-wrap: break-word;
-   hypens: auto;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    hypens: auto;
 }
 
 .post-full-content {
@@ -47,11 +39,10 @@
     object-fit: cover;
 }
 
-
 .content-title {
     margin: 0.8em 0 0.8em 0;
 }
-@media (width > $small-screen) {
+@include media(">phone") {
     .content-title {
         margin: 1em 0 1em 0;
     }
@@ -91,12 +82,12 @@
     grid-template-columns: 1fr;
 }
 
-@media (width > $small-screen) and (width <= $large-screen) {
+@include media(">phone", "<=tablet", "screen") {
     .post-feed {
         grid-template-columns: 1fr 1fr;
     }
 }
-@media (width >= $large-screen) {
+@include media(">tablet", "screen") {
     .post-feed {
         grid-template-columns: 1fr 1fr 1fr;
     }

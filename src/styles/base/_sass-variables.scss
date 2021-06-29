@@ -4,5 +4,8 @@ $font-base-heading: 1.2rem;
 $font-scale-text: $major-second;
 $font-scale-heading: $minor-third;
 
-$small-screen: 680px;
-$large-screen: 980px;
+$breakpoints: (
+    phone: 680px,
+    tablet: 980px,
+    desktop: 1024px,
+);
