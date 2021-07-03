@@ -1,7 +1,6 @@
-
-* {
-    max-width: var(--measure);
-}
+// * {
+//     max-width: var(--measure);
+// }
 
 html,
 body,
@@ -74,25 +73,10 @@ textarea {
     resize: vertical;
 }
 
-p,
-ul,
-ol,
-dl,
-blockquote {
-    margin: 0 0 1em 0;
-}
-
 ol,
 ul {
     padding-left: 1.3em;
     padding-right: 1.5em;
-}
-
-ol ol,
-ul ul,
-ul ol,
-ol ul {
-    margin: 0.5em 0 1em;
 }
 
 ul {
@@ -109,26 +93,22 @@ ol {
 }
 
 li {
-    margin: 0.5em 0;
     padding-left: 0.3em;
     line-height: var(--line-height--content);
 }
 
 dt {
     float: left;
-    margin: 0 20px 0 0;
     width: 120px;
     font-weight: var(--font--medium);
     text-align: right;
 }
 
 dd {
-    margin: 0 0 5px 0;
     text-align: left;
 }
 
 blockquote {
-    margin: 0.3em 0 1.8em;
     padding: 0 1.6em 0 1.6em;
     border-left: var(--color--secondary) 0.5em solid;
 }
@@ -181,7 +161,6 @@ h4,
 h5,
 h6 {
     font-family: var(--font-family--heading);
-    margin: 0.4em 0 1em 0;
     color: var(--color--base);
     line-height: var(--line-height--heading);
     text-rendering: optimizeLegibility;

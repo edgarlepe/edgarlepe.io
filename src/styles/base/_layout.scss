@@ -6,18 +6,49 @@
 }
 
 .container {
-    max-width: 1120px;
+    //max-width: 1120px;
+    max-width: 70rem;
     margin: 0 auto;
     padding: 0 4vw;
 }
 
 .content {
-    margin: 0 auto;
+    --space: calc(var(--heading--ms3) + 0.2vw);
     line-height: var(--line-height--content);
+    margin: 0 auto;
 }
+
+.content-body {
+    --space: calc(var(--text--ms4) + 0.2vw);
+}
+
+.content,
 .content-body {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+}
+
+.content > *,
+content-body > * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.content > * + *,
+.content-body > * + * {
+    margin-top: var(--space);
+}
+
+.content ul *,
+.content ol * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.content ul * + *,
+.content ol * + * {
+    margin-top: calc(var(--text--ms-3) + 0.2vw);
 }
 
 .content p {
@@ -26,36 +57,43 @@
     hyphens: auto;
 }
 
+.content pre {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content figure {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content figcaption {
+    margin-top: var(--space);
+}
+
 .post-full-content {
-    max-width: 720px;
+    max-width: var(--measure);
     margin: 0 auto;
     background: #fff;
 }
 
 .post-feature-image img {
-    margin: 0 0 3vw;
     width: 100%;
-    height: 500px;
+    max-height: 500px;
     object-fit: cover;
 }
 
 .content-title {
-    margin: 0.8em 0 0.8em 0;
-}
-@include media(">phone") {
-    .content-title {
-        margin: 1em 0 1em 0;
-    }
+    margin: calc(var(--heading--ms6) + 0.2vw) 0;
 }
 
 .content-body figure {
-    margin: 0.4em 0 1.6em;
-    font-size: 1.75rem;
+    font-size: calc(var(--text--ms2) + 0.2vw);
     font-weight: var(--font--bold);
 }
 
 .content-body pre {
-    margin: 0.4em 0 1.8em;
     font-size: 1rem;
     line-height: 1.4;
     white-space: pre-wrap;
