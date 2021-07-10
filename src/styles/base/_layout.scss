@@ -22,24 +22,6 @@
     --space: calc(var(--text--ms4) + 0.2vw);
 }
 
-.content,
-.content-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.content > *,
-content-body > * {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.content > * + *,
-.content-body > * + * {
-    margin-top: var(--space);
-}
-
 .content ul *,
 .content ol * {
     margin-top: 0;
@@ -58,7 +40,7 @@ content-body > * {
 }
 
 .content pre {
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }

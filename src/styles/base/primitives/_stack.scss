@@ -1,0 +1,18 @@
+.stack,
+.stack[recursive] {
+    --space: var(--line-height--default);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.stack > *,
+.stack[recursive] * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.stack > * + *,
+.stack[recursive] * + * {
+    margin-top: var(--space);
+}

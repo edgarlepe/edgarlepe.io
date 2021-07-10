@@ -5,22 +5,16 @@ import { ghostSettings } from "./queries/GhostSettingsQuery"
 
 import { Navigation } from "."
 
-import {
-    siteFoot,
-    siteFootNav,
-    siteFootNavRight,
-} from './Footer.module.scss'
-
 const Footer = () => {
     const site = ghostSettings()
 
     return (
-        <footer className={siteFoot}>
-            <div className={`${siteFootNav} container`}>
+        <footer className="site-foot">
+            <div className="site-foot-nav container">
                 <div>
                     <Link to="/">{site.title}</Link> © 2021
                 </div>
-                <div className={siteFootNavRight}>
+                <div className="site-foot-nav-right">
                     <Navigation
                         data={site.navigation}
                     />

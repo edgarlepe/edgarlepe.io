@@ -27,7 +27,7 @@ const Post = ({ data, location }) => {
             </Helmet>
             <Layout>
                 <div className="container">
-                    <article className="content">
+                    <article className="content stack">
                         { post.feature_image ?
                             <figure className="post-feature-image">
                                 <img src={ post.feature_image } alt={ post.title } />
@@ -37,7 +37,7 @@ const Post = ({ data, location }) => {
 
                             {/* The main post content */ }
                             <section
-                                className="content-body load-external-scripts"
+                                className="content-body load-external-scripts stack"
                                 dangerouslySetInnerHTML={{ __html: post.html }}
                             />
                         </section>
