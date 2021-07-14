@@ -1,0 +1,86 @@
+version: 2.1
+jobs:
+  dependencies:
+    docker:
+      - image: circle/node
+    working_directory: ~/siteci
+    steps:
+      - checkout
+      - run:
+          name: Install NVM
+          command: |
+            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+      - run:
+          name: Install Node
+          command: |
+            nvm install
+            nvm use
+      - run:
+          name: Install Yarn
+          command: |
+            npm i -g yarn
+            yarn set version latest
+      - restore_cache:
+          keys:
+            - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - yarn-packages-v1-{{ .Branch }}
+            - yarn-packages-v1
+      - run:
+          name: Install Dependencies
+          command: |
+            yarn install --immutable
+      - save_cache:
+          name: Save YARN Package Cache
+          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ./.yarn/cache
+      - save_cache:
+          key: v1-repo-{{ .Branch }}--{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - ~/siteci
+
+  build:
+    docker:
+      - image: circleci/node
+    working_directory: ~/siteci
+    steps:
+        - restore_cache:
+            key: v1-repo-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+        - restore_cache:
+            key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        - run:
+            name: Build
+            command: |
+              yarn run build
+        - persist_to_workspace:
+            root: .
+            paths:
+              - .
+
+  deploy:
+    docker:
+      - image: circleci/node
+    working_directory: ~/siteci
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Deploy
+          command: |
+            yarn run deploy
+
+workflows:
+  version: 2.1
+  build_and_deploy:
+    jobs:
+      - dependencies
+      - build:
+          requires:
+            - dependencies
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - main
