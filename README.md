@@ -1,4 +1,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8f001645-c5b6-442f-ba5b-34c86baafd8d/deploy-status)](https://app.netlify.com/sites/frosty-wright-559d28/deploys)
+[![CircleCI](https://circleci.com/gh/edgarlepe/edgarlepe.io/tree/master.svg?style=svg)](https://circleci.com/gh/edgarlepe/edgarlepe.io/tree/master)
 
 # Edgar Giovanni Lepe's personal website
 
