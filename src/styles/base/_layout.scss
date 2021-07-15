@@ -56,7 +56,8 @@
 
 .post-full-content {
     max-width: var(--measure);
-    margin: 0 auto;
+    margin: 0 auto var(--heading--ms6) auto; // consider moving this to content
+                                             // stack primitive
     background: #fff;
 }
 
@@ -67,7 +68,7 @@
 }
 
 .content-title {
-    margin: calc(var(--heading--ms6) + 0.2vw) 0;
+    margin: 0 0 calc(var(--heading--ms6) + 0.2vw) 0;
 }
 
 .content-body figure {
