@@ -98,18 +98,7 @@
 
 .post-feed {
     display: grid;
-    justify-content: space-between;
+    justify-content: space-evenly;
     grid-gap: 30px;
-    grid-template-columns: 1fr;
-}
-
-@include media(">phone", "<=tablet", "screen") {
-    .post-feed {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@include media(">tablet", "screen") {
-    .post-feed {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+    grid-template-columns: repeat(auto-fit, minmax(30%, 40ch));
 }
