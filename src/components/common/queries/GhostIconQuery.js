@@ -2,18 +2,15 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 export const ghostIcon = () => {
     const { file } = useStaticQuery(
-        graphql`
-            query {
-                file(relativePath: { eq: "ghost-icon.png" }) {
-                    childImageSharp {
-                        fixed(width: 30, height: 30) {
-                            ...GatsbyImageSharpFixed
-                        }
-                    }
-                }
-            }
-        `
+        graphql`{
+  file(relativePath: {eq: "ghost-icon.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 30, height: 30, layout: FIXED)
+    }
+  }
+}
+`
     )
 
-    return file.childImageSharp.fixed
+    return file.childImageSharp.gatsbyImageData;
 }

@@ -46,6 +46,7 @@ const generateItem = function generateItem(siteUrl, post) {
 
 const generateRSSFeed = function generateRSSFeed(siteConfig) {
     return {
+        title: `${siteConfig.shortTitle}'s RSS Feed`,
         serialize: ({ query: { allGhostPost } }) => allGhostPost.edges.map(edge => Object.assign({}, generateItem(siteConfig.siteUrl, edge.node))),
         setup: ({ query: { allGhostSettings } }) => {
             const siteTitle = allGhostSettings.edges[0].node.title || `No Title`
